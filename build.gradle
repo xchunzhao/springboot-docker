@@ -16,7 +16,10 @@ apply plugin: 'spring-boot'
 
 
 
-jar.archiveName = 'sprinboot-docker.jar'
+jar {
+	baseName = 'springboot-docker'
+	version = '0.0.1-SNAPSHOT'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
