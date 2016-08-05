@@ -11,15 +11,13 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'spring-boot'
 apply plugin: 'jetty'
-apply plugin: 'war'
+apply plugin: 'spring-boot'
 
 
-war {
-	baseName = 'springboot-docker'
-	version = '0.0.1-SNAPSHOT'
-}
+
+jar.archiveName = 'sprinboot-docker.jar'
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -29,7 +27,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+	compile('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
