@@ -6,6 +6,8 @@
 
 
 ### Build
-1、`docker build -t image-name .`
-2、`docker run -d -p 8080:8080 image-name`
-3、`curl localhost:8080`
+  ```
+  docker build -t image-name .  
+  docker run -d -p 8080:8080 image-name  
+  curl localhost:8080  
+  ```
